@@ -1,16 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Game.css';
 
 import { Board } from '../Board/Board';
 
 export const Game = () => { 
-    //create a const with array 
-    const cellValues = ['', '', '', '', '', '', '', '', ''];
+    
+    //create a local state with array using hooks
+    const [cellValues, setCellValues] = useState(['', '', '', '', '', '', '', '', '']);
 
     const winningCombination = [];
 
+    //creating a clicked event and using the cell index to create a new array
     const onCellClicked = (cellIndex) => {
-        console.log(`Cell ${cellIndex} clicked.`);
+        const newCellValues = [...cellValues];
+
+        newCellValues[cellIndex] = 'X';
+        setCellValues(newCellValues);
     };
 
   return (
