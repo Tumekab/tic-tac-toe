@@ -13,6 +13,23 @@ const winningMatrix = {
 };
 
 export const calculateWinner = (cellValues, cellIndex) => {
+    
+    const winningRanges = winningMatrix[cellIndex];
+
+    for(let i = 0; i < winningRanges.length; i++){
+        const currentValue = cellValues[cellIndex];
+        const firstOption = cellValues[winningRanges[i][0]];
+        const secondOption = cellValues[winningRanges[i][1]];
+
+        if(currentValue === firstOption && firstOption === secondOption) {
+            return {
+                hasResult: true,
+                winner: currentValue,
+                winningCombination: [cellIndex, winningRanges[i][0], winningRanges[i][1]]
+            }
+        }
+    }
+
     return {
         hasResult: false,
         winner: undefined,
