@@ -13,11 +13,20 @@ export const Game = () => {
     const [isGameOver, setIsGameOver] = useState(false);
     const [numberOfTurnsLeft, setNumberOfTurnsLeft] = useState(9);
     const [winner, setWinner] = useState();
-
-    const winningCombination = [];
+    const [winningCombination, setWinningCombination] = useState([]);
     
     //helps to keep populated cells from being toggled again
     const isCellEmpty = (cellIndex) => cellValues[cellIndex] === '';
+
+    const restartGame = () => {
+
+        setCellValues(['', '', '', '', '', '', '', '', '']);
+        setXIsNext(true);
+        setIsGameOver(false);
+        setNumberOfTurnsLeft(9);
+        setWinner(undefined);
+        setWinningCombination([]);
+    }
 
     //creating a clicked event and using the cell value and create a new array
     //creates turns using bang operator to switch from X to O
@@ -41,6 +50,7 @@ export const Game = () => {
             setIsGameOver(calcResult.hasResult);
             setNumberOfTurnsLeft(newNumberOfTurnsLeft);
             setWinner(calcResult.winner);
+            setWinningCombination(calcResult.winningCombination);
         }
     };
 
@@ -57,6 +67,7 @@ export const Game = () => {
     <Results 
         isGameOver={ isGameOver }
         winner={ winner }
+        onNewGameClicked={ restartGame }
     />
   </>
   );
