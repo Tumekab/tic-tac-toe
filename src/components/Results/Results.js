@@ -12,12 +12,12 @@ export const Results = (props) => {
 
     return (
         <div id="modal-overlay" className={ resultClasses }>
-        <div id="game-result-modal">
-            <div id="result-container">
-                <div id="winner-container">
-                    <span>{ message }</span>
+            <div id="game-result-modal">
+                <div id="result-container">
+                    <div id="winner-container">
+                        <span>{ message }</span>
+                    </div>
                 </div>
-            </div>
             <div id="new-game-container">
                 <button 
                     id="new-game-button"

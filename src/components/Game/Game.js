@@ -3,7 +3,7 @@ import './Game.css';
 
 import { Board } from '../Board/Board';
 import { Results } from '../Results/Results';
-import { calculateWinner } from '../../Ultils/WinnerCalculater';
+import { calculateWinner } from '../../utilities/WinnerCalculater';
 
 export const Game = () => { 
 
@@ -43,8 +43,6 @@ export const Game = () => {
             //calculate the result
             const calcResult = calculateWinner(newCellValues, newNumberOfTurnsLeft, cellIndex);
             
-
-            
             setCellValues(newCellValues);
             setXIsNext(!xIsNext);
             setIsGameOver(calcResult.hasResult);
@@ -63,12 +61,12 @@ export const Game = () => {
             winningCombination={ winningCombination}
             onCellClicked={ onCellClicked }
         />
-    </div>
-    <Results 
-        isGameOver={ isGameOver }
-        winner={ winner }
-        onNewGameClicked={ restartGame }
-    />
-  </>
+      </div>
+        <Results 
+            isGameOver={ isGameOver }
+            winner={ winner }
+            onNewGameClicked={ restartGame }
+        />
+    </>
   );
 }
