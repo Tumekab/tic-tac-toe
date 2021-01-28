@@ -6,7 +6,7 @@ import './Cell.css';
 export const Cell = (props) => {
 
     // to handle classes on elements
-    
+
     const cellClasses = classNames ({
         cell: true,
         winner: props.canHighlight
@@ -18,7 +18,7 @@ export const Cell = (props) => {
     });
 
   return (
-    <button className={ cellClasses }>
+    <button className={ cellClasses } onClick={ props.onClick }>
         <span className={ cellContentClasses }>{ props.value }</span>
     </button>
   );

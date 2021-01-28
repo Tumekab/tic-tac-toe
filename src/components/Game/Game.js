@@ -5,9 +5,13 @@ import { Board } from '../Board/Board';
 
 export const Game = () => { 
     //create a const with array 
-    const cellValues = ['X', 'X', 'X', 'O', 'O', 'X', 'O', '', ''];
+    const cellValues = ['', '', '', '', '', '', '', '', ''];
 
-    const winningCombination = [0, 1, 2];
+    const winningCombination = [];
+
+    const onCellClicked = (cellIndex) => {
+        console.log(`Cell ${cellIndex} clicked.`);
+    };
 
   return (
     <>
@@ -16,6 +20,7 @@ export const Game = () => {
         <Board 
             cellValues={ cellValues } 
             winningCombination={ winningCombination}
+            onCellClicked={ onCellClicked }
         />
     </div>
 
