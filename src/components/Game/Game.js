@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Game.css';
 
 import { Board } from '../Board/Board';
+import { Results } from '../Results/Results';
 
 export const Game = () => { 
 
@@ -15,7 +16,7 @@ export const Game = () => {
     const isCellEmpty = (cellIndex) => cellValues[cellIndex] === '';
 
     //creating a clicked event and using the cell value and create a new array
-    //creates turns using band operator to switch from X to O
+    //creates turns using bang operator to switch from X to O
     // X will always go first
     //if statement stops the toggle happening once a cell has been populated
     const onCellClicked = (cellIndex) => {
@@ -38,19 +39,7 @@ export const Game = () => {
             onCellClicked={ onCellClicked }
         />
     </div>
-
-    <div id="modal-overlay">
-        <div id="game-result-modal">
-            <div id="result-container">
-                <div id="winner-container">
-                    <span></span>
-                </div>
-            </div>
-            <div id="new-game-container">
-                <button id="new-game-button">Start New Game</button>
-            </div>
-        </div>
-    </div>
+    <Results />
   </>
   );
 }
