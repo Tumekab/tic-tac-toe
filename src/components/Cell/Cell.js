@@ -5,6 +5,8 @@ import './Cell.css';
 
 export const Cell = (props) => {
 
+    // to handle classes on elements
+    
     const cellClasses = classNames ({
         cell: true,
         winner: props.canHighlight
