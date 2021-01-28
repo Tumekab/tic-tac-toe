@@ -12,6 +12,7 @@ export const Game = () => {
     const [xIsNext, setXIsNext] = useState(true);
     const [isGameOver, setIsGameOver] = useState(false);
     const [numberOfTurnsLeft, setNumberOfTurnsLeft] = useState(9);
+    const [winner, setWinner] = useState();
 
     const winningCombination = [];
     
@@ -39,6 +40,7 @@ export const Game = () => {
             setXIsNext(!xIsNext);
             setIsGameOver(calcResult.hasResult);
             setNumberOfTurnsLeft(newNumberOfTurnsLeft);
+            setWinner(calcResult.winner);
         }
     };
 
@@ -54,6 +56,7 @@ export const Game = () => {
     </div>
     <Results 
         isGameOver={ isGameOver }
+        winner={ winner }
     />
   </>
   );

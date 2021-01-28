@@ -30,6 +30,7 @@ export const calculateWinner = (cellValues, newNumberOfTurnsLeft, cellIndex) => 
         }
     }
 
+    //determines what happens when there is a tie
     if (newNumberOfTurnsLeft === 0) {
         return {
             hasResult: true,
