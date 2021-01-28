@@ -11,6 +11,7 @@ export const Game = () => {
     const [cellValues, setCellValues] = useState(['', '', '', '', '', '', '', '', '']);
     const [xIsNext, setXIsNext] = useState(true);
     const [isGameOver, setIsGameOver] = useState(false);
+    const [numberOfTurnsLeft, setNumberOfTurnsLeft] = useState(9);
 
     const winningCombination = [];
     
@@ -27,14 +28,17 @@ export const Game = () => {
 
             newCellValues[cellIndex] = xIsNext ? 'X' : 'O';
 
+            const newNumberOfTurnsLeft = numberOfTurnsLeft - 1;
+
             //calculate the result
-            const calcResult = calculateWinner(newCellValues, cellIndex);
+            const calcResult = calculateWinner(newCellValues, newNumberOfTurnsLeft, cellIndex);
             
 
             
             setCellValues(newCellValues);
             setXIsNext(!xIsNext);
             setIsGameOver(calcResult.hasResult);
+            setNumberOfTurnsLeft(newNumberOfTurnsLeft);
         }
     };
 
