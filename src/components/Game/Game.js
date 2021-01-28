@@ -3,12 +3,14 @@ import './Game.css';
 
 import { Board } from '../Board/Board';
 import { Results } from '../Results/Results';
+import { calculateWinner } from '../../Ultils/WinnerCalculater';
 
 export const Game = () => { 
 
-    //create a local state with array using hooks
+    //create local states
     const [cellValues, setCellValues] = useState(['', '', '', '', '', '', '', '', '']);
     const [xIsNext, setXIsNext] = useState(true);
+    const [isGameOver, setIsGameOver] = useState(false);
 
     const winningCombination = [];
     
@@ -24,8 +26,15 @@ export const Game = () => {
             const newCellValues = [...cellValues];
 
             newCellValues[cellIndex] = xIsNext ? 'X' : 'O';
+
+            //calculate the result
+            const calcResult = calculateWinner(newCellValues, cellIndex);
+            
+
+            
             setCellValues(newCellValues);
             setXIsNext(!xIsNext);
+            setIsGameOver(calcResult.hasResult);
         }
     };
 
@@ -39,7 +48,9 @@ export const Game = () => {
             onCellClicked={ onCellClicked }
         />
     </div>
-    <Results />
+    <Results 
+        isGameOver={ isGameOver }
+    />
   </>
   );
 }
