@@ -6,15 +6,15 @@ import { Cell } from '../Cell/Cell'
 export const Board = () => {
   return (
     <div id="board">
-        <Cell />
-        <Cell />
-        <Cell />
-        <Cell />
-        <Cell />
-        <Cell />
-        <Cell />
-        <Cell />
-        <Cell />
+        <Cell value="X" />
+        <Cell value="X" />
+        <Cell value="X" />
+        <Cell value="O" />
+        <Cell value="X" />
+        <Cell value="" />
+        <Cell value="O" />
+        <Cell value="X" />
+        <Cell value="X" />
     </div>
   );
 }
