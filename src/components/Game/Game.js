@@ -4,18 +4,22 @@ import './Game.css';
 import { Board } from '../Board/Board';
 
 export const Game = () => { 
-    
+
     //create a local state with array using hooks
     const [cellValues, setCellValues] = useState(['', '', '', '', '', '', '', '', '']);
+    const [xIsNext, setXIsNext] = useState(true);
 
     const winningCombination = [];
 
-    //creating a clicked event and using the cell index to create a new array
+    //creating a clicked event and using the cell value and create a new array
+    //creates turns using band operator to switch from X to O
+    // X will always go first
     const onCellClicked = (cellIndex) => {
         const newCellValues = [...cellValues];
 
-        newCellValues[cellIndex] = 'X';
+        newCellValues[cellIndex] = xIsNext ? 'X' : 'O';
         setCellValues(newCellValues);
+        setXIsNext(!xIsNext);
     };
 
   return (
