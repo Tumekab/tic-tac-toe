@@ -6,7 +6,7 @@
     font-weight: bold;
     color: var(--accent-color);
     background: var(--content-background-color);
-    border: var(--default-primary-border);
+    border: var(--content-background-color);
     border-radius: var(--default-border-radius);
     outline: none;
     /* box-shadow: var(--box-shadow); */
