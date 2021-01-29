@@ -8,7 +8,7 @@ export const Results = (props) => {
         'modal-open': props.isGameOver
     })
 
-    const message = props.winner ? `Winner is ${ props.winner }.` : 'It is a tie.';
+    const message = props.winner ? `Winner is ${ props.winner }.` : 'Its a tie.';
 
     return (
         <div id="modal-overlay" className={ resultClasses }>

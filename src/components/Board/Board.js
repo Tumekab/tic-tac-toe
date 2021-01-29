@@ -10,10 +10,10 @@ export const Board = (props) => {
         const canHighlight = props.winningCombination && props.winningCombination.indexOf(index) >= 0;
 
         return <Cell 
-                key={ index } 
-                value={ value } 
-                canHighlight={ canHighlight }
-                onClick={() => props.onCellClicked(index)}
+                  key={ index } 
+                  value={ value } 
+                  canHighlight={ canHighlight }
+                  onClick={() => props.onCellClicked(index)}
                 />
     });
 

@@ -31,8 +31,8 @@
     height: 8vmin;
     font-size: var(--main-title-font-size);
     font-weight: bold;
-    color: var(--primary-color);
-    background: var(--accent-color);
+    color: var(--primary-saturated);
+    background: var(--content-background-color);
     border: var(--default-accent-border);
     box-shadow: var(--box-shadow);
     border-radius: var(--modal-items-border-radius);
@@ -51,8 +51,8 @@
   #new-game-container > button {
     font-size: 3vmin;
     padding: 1.5vmin;
-    color: var(--accent-color);
-    background: var(--primary-gradient);
+    color: var(--primary-saturated);
+    background: var(--content-background-color);
     border: var(--default-primary-border);
     border-radius: var(--modal-items-border-radius);
     outline: none;

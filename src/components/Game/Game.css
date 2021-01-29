@@ -1,4 +1,5 @@
 #game {
+    backdrop-filter: blur(2rem);
     background: var(--content-background-color);
     border-radius: var(--default-border-radius);
     padding: 3vmin;
@@ -6,7 +7,7 @@
   }
   
   h1 {
-    color: var(--primary-color);
+    color: #6f5269;
     text-align: center;
     margin-bottom: 2vmin;
     font-size: var(--main-title-font-size);
