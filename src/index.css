@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
 
 :root {
-  --background-light-color: #E19DCB;
-  --background-dark-color: #ED54DB;
+  --background-light-color: #7EC1DE;
+  --background-dark-color: #7E8FDE;
   --content-background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 0.557), rgba(255, 255, 255, 0.3));
-  --primary-color: #c1bfbf;
-  --primary-brighter: #aa59fcbf;
-  --primary-saturated: #a956ba;
-  --primary-saturated-brighter: #b72fc4;
-  --accent-color: #900db8;
-  --accent-darker: #6a00a7;
+  --primary-color: #a8bed3;
+  --primary-brighter: #7EB8DE;
+  --primary-saturated: #98C0F5;
+  --primary-saturated-brighter: #2f9cc4;
+  --accent-color: #47649E;
+  --accent-darker: #3b74a5;
   --box-shadow-color: rgba(0,0,0,0.75);
   --modal-overlay-color: rgba(0, 0, 0, 0.3);
 
