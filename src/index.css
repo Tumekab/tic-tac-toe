@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
 
 :root {
-  --background-light-color: #7EC1DE;
-  --background-dark-color: #7E8FDE;
+  --background-light-color: #E19DCB;
+  --background-middle-color: #7EC1DE;
+  --background-dark-color: #F57DE7;
   --content-background-color: linear-gradient(to right bottom, rgba(255, 255, 255, 0.557), rgba(255, 255, 255, 0.3));
   --primary-color: #a8bed3;
   --primary-brighter: #7EB8DE;
@@ -13,7 +14,7 @@
   --box-shadow-color: rgba(0,0,0,0.75);
   --modal-overlay-color: rgba(0, 0, 0, 0.3);
 
-  --main-background-gradient: linear-gradient(to right top, var(--background-dark-color) 0%, var(--background-light-color) 100%);
+  --main-background-gradient: linear-gradient(to right top, var(--background-dark-color) 0%, var(--background-middle-color) 50%, var(--background-light-color) 100%);
   --primary-gradient: linear-gradient(to right, var(--primary-color) 0%,var(--primary-saturated) 100%);
   --primary-highlight-gradient: linear-gradient(to right top, var(--primary-brighter) 0%,var(--primary-saturated-brighter) 100%);
   /* --box-shadow: 0 1vmin 2vmin -1vmin rgba(0,0,0,0.75); */
